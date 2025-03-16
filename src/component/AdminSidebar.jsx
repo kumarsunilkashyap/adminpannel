@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-
+import DashboardPage from "../pages/DashboardPage ";
+import AnalyticsPage from "../pages/AnalyticsPage";
+import Users from "../pages/Users";
+import { NavLink } from "react-router-dom";
 const AdminSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,36 +22,36 @@ const AdminSidebar = () => {
           <h2 className="text-lg font-bold text-white">Admin Panel</h2>
         </div>
         <nav className="p-4 space-y-2">
-          <a
-            href="#dashboard"
+          <NavLink
+            to="dashboard"
             className="block py-2 px-4 rounded hover:bg-gray-700"
           >
             📊 Dashboard
-          </a>
-          <a
-            href="#users"
+          </NavLink>
+          <NavLink
+            to="users"
             className="block py-2 px-4 rounded hover:bg-gray-700"
           >
             👥 Users
-          </a>
-          <a
-            href="#analytics"
+          </NavLink>
+          <NavLink
+            to="analytics"
             className="block py-2 px-4 rounded hover:bg-gray-700"
           >
             📈 Analytics
-          </a>
-          <a
-            href="#settings"
+          </NavLink>
+          <NavLink
+            to="settings"
             className="block py-2 px-4 rounded hover:bg-gray-700"
           >
             ⚙️ Settings
-          </a>
-          <a
-            href="#logout"
+          </NavLink>
+          <NavLink
+            to="logout"
             className="block py-2 px-4 rounded hover:bg-gray-700 text-red-500"
           >
             🚪 Logout
-          </a>
+          </NavLink>
         </nav>
       </div>
 
@@ -74,10 +77,9 @@ const AdminSidebar = () => {
           <h1 className="text-lg font-bold">Admin Dashboard</h1>
         </header>
         <main className="p-4">
-          <p>
-            Welcome to the Admin Panel! Select a section from the sidebar to get
-            started.
-          </p>
+          <DashboardPage />
+          <Users />
+          <AnalyticsPage />
         </main>
       </div>
     </div>

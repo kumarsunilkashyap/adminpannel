@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import DashboardPage from "../pages/DashboardPage ";
-import AnalyticsPage from "../pages/AnalyticsPage";
-import Users from "../pages/Users";
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
+
 const AdminSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -56,8 +54,8 @@ const AdminSidebar = () => {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 ml-0 lg:ml-64 transition-margin duration-300 ease-in-out">
-        <header className="p-4 bg-white shadow flex justify-between items-center">
+      <div className="flex-1 flex flex-col ml-0 lg:ml-64 transition-margin duration-300 ease-in-out">
+        <header className="p-4 bg-white shadow flex justify-between items-center sticky top-0 z-10">
           <button className="text-gray-800 lg:hidden" onClick={toggleSidebar}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -74,16 +72,13 @@ const AdminSidebar = () => {
               />
             </svg>
           </button>
-          <h1 className="text-lg font-bold">Admin Dashboard</h1>
+          <h1 className="text-xl font-bold">Admin Panel</h1>
         </header>
-        <main className="p-4">
-          <DashboardPage />
-          <Users />
-          <AnalyticsPage />
+        <main className="flex-1 p-4 bg-gray-100">
+          <Outlet />
         </main>
       </div>
     </div>
   );
 };
-
 export default AdminSidebar;

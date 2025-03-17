@@ -48,7 +48,7 @@ const AnalyticsPage = () => {
   };
 
   return (
-    <div className="p-4 bg-gray-100 min-h-screen">
+    <div className="p-4 bg-gray-100 min-h-screen pb-20">
       <h1 className="text-2xl font-bold mb-4">Analytics Overview</h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-6">
         {/* Cards for Key Metrics */}

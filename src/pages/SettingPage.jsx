@@ -9,7 +9,7 @@ const SettingPage = () => {
 
   return (
     <div
-      className={`p-4 min-h-screen ${
+      className={`p-4 pb-20 min-h-screen ${
         darkMode ? "bg-gray-900 text-white" : "bg-gray-100 text-gray-900"
       }`}
     >

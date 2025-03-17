@@ -7,9 +7,7 @@ const Layout = () => {
   return (
     <>
       <AdminSidebar />
-     
-        <Outlet />
-   
+
       <Footer />
     </>
   );

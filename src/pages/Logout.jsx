@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Logout = () => {
+  const navigate = useNavigate();
   const handleLogout = () => {
     // Add your logout logic here, like clearing user session or token
     console.log("User logged out");
@@ -23,7 +25,9 @@ const Logout = () => {
         </p>
         <div className="flex justify-center space-x-4">
           <button
-            onClick={handleLogout}
+            onClick={() => {
+              navigate("login");
+            }}
             className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
           >
             Yes, Log Out

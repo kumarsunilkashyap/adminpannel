@@ -72,7 +72,9 @@ const AdminSidebar = () => {
               />
             </svg>
           </button>
-          <h1 className="text-xl font-bold">Admin Panel</h1>
+          <h1 className="text-xl font-bold text-center">
+            Welcome to the Admin Panel Page
+          </h1>
         </header>
         <main className="flex-1 p-4 bg-gray-100">
           <Outlet />

@@ -13,6 +13,9 @@ import SettingPage from "./pages/SettingPage";
 import Logout from "./pages/Logout";
 import Login from "./pages/Login";
 import PageNotFound from "./pages/PageNotFound";
+import TermsOfService from "./pages/TremsofService";
+import PrivacyPolicy from "./pages/ PrivacyPolicy";
+import ContactUs from "./pages/ContactUs";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -23,6 +26,9 @@ function App() {
         <Route path="settings" element={<SettingPage />} />
         <Route path="logout" element={<Logout />} />
         <Route path="login" element={<Login />} />
+        <Route path="termsofservices" element={<TermsOfService />} />
+        <Route path="privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="contact-us" element={<ContactUs />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     )

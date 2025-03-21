@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -8,23 +9,23 @@ const Footer = () => {
           © {new Date().getFullYear()} Admin Panel. All rights reserved.
         </p>
         <div className="mt-2 flex justify-center space-x-4">
-          <a
-            href="#"
+          <NavLink
+            to="privacypolicy"
             className="hover:text-blue-400"
             aria-label="Privacy Policy"
           >
             Privacy Policy
-          </a>
-          <a
-            href="#"
+          </NavLink>
+          <NavLink
+            to="termsofservices"
             className="hover:text-blue-400"
             aria-label="Terms of Service"
           >
             Terms of Service
-          </a>
-          <a href="#" className="hover:text-blue-400" aria-label="Contact Us">
+          </NavLink>
+          <NavLink to="contact-us" className="hover:text-blue-400" aria-label="Contact Us">
             Contact Us
-          </a>
+          </NavLink>
         </div>
       </div>
     </footer>

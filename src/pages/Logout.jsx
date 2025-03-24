@@ -3,14 +3,17 @@ import { useNavigate } from "react-router-dom";
 
 const Logout = () => {
   const navigate = useNavigate();
+
   const handleLogout = () => {
     // Add your logout logic here, like clearing user session or token
     console.log("User logged out");
+    navigate("/login"); // Redirect to the login page after logout
   };
 
   const handleCancel = () => {
     // Logic to redirect back to dashboard or previous page
     console.log("Logout canceled");
+    navigate("/dashboard");
   };
 
   return (
@@ -25,9 +28,7 @@ const Logout = () => {
         </p>
         <div className="flex justify-center space-x-4">
           <button
-            onClick={() => {
-              navigate("login");
-            }}
+            onClick={handleLogout}
             className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
           >
             Yes, Log Out

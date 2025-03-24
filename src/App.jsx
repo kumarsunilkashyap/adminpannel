@@ -19,17 +19,19 @@ import ContactUs from "./pages/ContactUs";
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="" element={<Layout />}>
-        <Route index path="dashboard" element={<DashboardPage />} />
-        <Route path="users" element={<Users />} />
-        <Route path="analytics" element={<AnalyticsPage />} />
-        <Route path="settings" element={<SettingPage />} />
-        <Route path="logout" element={<Logout />} />
-        <Route path="login" element={<Login />} />
-        <Route path="termsofservices" element={<TermsOfService />} />
-        <Route path="privacypolicy" element={<PrivacyPolicy />} />
-        <Route path="contact-us" element={<ContactUs />} />
-        <Route path="*" element={<PageNotFound />} />
+      <Route path="admin" element={<Login />}>
+        <Route path="" element={<Layout />}>
+          <Route index path="dashboard" element={<DashboardPage />} />
+          <Route path="users" element={<Users />} />
+          <Route path="analytics" element={<AnalyticsPage />} />
+          <Route path="settings" element={<SettingPage />} />
+          <Route path="logout" element={<Logout />} />
+          <Route path="login" element={<Login />} />
+          <Route path="termsofservices" element={<TermsOfService />} />
+          <Route path="privacypolicy" element={<PrivacyPolicy />} />
+          <Route path="contact-us" element={<ContactUs />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Route>
       </Route>
     )
   );
